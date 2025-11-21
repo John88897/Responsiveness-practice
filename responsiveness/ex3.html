@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* width below 600px */
+        header{
+            background-color: rgb(47, 47, 47);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        footer{
+            color: white;
+            background-color: rgb(47, 47, 47);
+            text-align: center;
+            padding: 20px;
+        }
+        .content{
+            display:grid;
+            padding: 12px 24px ;
+            gap: 20px;
+            
+        }
+        .main{
+            background-color: whitesmoke;
+            flex: 3;
+            padding: 20px;
+            
+        }
+        .sidebar{
+            background-color: wheat;
+            flex: 1;
+            padding: 20px;
+        }
+
+        @media (max-width: 600px){
+            header{
+                padding: 25px;
+            }
+
+            footer{
+                padding: 25px;
+            }
+            .content{
+                display: flex;
+                flex-direction: row;
+                padding: 12px 24px;
+                gap: 15px;
+            }
+            .main{
+                flex: 1;
+
+            }
+            .sidebar{
+                flex: 1;
+            }
+        }
+
+        @media (min-width: 900px) {
+            header {
+                padding: 30px;
+            }
+            
+            footer {
+                padding: 30px;
+            }
+            
+            .content {
+                gap: 20px;
+            }
+            
+            .main {
+                flex: 3;
+            }
+            
+            .sidebar {
+                flex: 1;
+            }
+        }
+        </style>
+</head>
+<body>
+    <div class="contain">
+        <header>Responsive Header</header>
+        <div class="content">
+            <div class="main">Main Content</div>
+            <div class="sidebar">Sidebar</div>
+        </div>
+        <footer>Footer</footer>
+    </div>
+</body>
+</html>

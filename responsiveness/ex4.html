@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .wrapper{
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 200px;
+        }
+        
+        .small {
+            display: none;
+            background-color: #ff6b6b;
+            color: white;
+            padding: 20px 40px;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        
+        .big {
+            display: none;
+            background-color: #51cf66;
+            color: white;
+            padding: 30px 60px;
+            border-radius: 8px;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        
+        @media only screen and (max-width: 600px) {
+            .small {
+                display: block;
+            }
+        }
+        
+        @media only screen and (min-width: 601px) {
+            .big {
+                display: block;
+            }
+        }
+
+        .wrapper-2 {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .content-2 {
+            /* Width: Never smaller than 300px */
+            /* In between width: 100% */
+            /* Width: Never bigger than 800px */
+            width: clamp(300px, 100%, 800px);
+            height: 400px;
+            background-color: #c0ff00;
+            border-radius: 8px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <span class="small">i'm small</span>
+            <span class="big">I'M BIG</span>
+        </div>
+    </div>
+    <div class="wrapper-2">
+        <div class="content-2">
+        </div>
+    </div>
+</body>
+</html>
